@@ -1,37 +1,28 @@
-# PulseOps · Dashboard corporativo de transporte
+# Dashboard Solbus
 
-Dashboard ejecutivo multisede para Córdoba, Comodoro, San Luis y Villa Mercedes. La interfaz prioriza una lectura rápida, navegación fluida y drill-down desde los indicadores hasta cada base operativa.
+Dashboard corporativo multisede para transporte urbano con datos demo de Córdoba, Comodoro, San Luis y Villa Mercedes.
 
-## Stack
+## Ejecutar en Windows PowerShell
 
-- React + TypeScript + Vite
-- Framer Motion para transiciones y microinteracciones
-- Recharts para visualizaciones
-- Lucide React para iconografía
-- CSS responsive con estética dark glass / neon minimal
-
-## Ejecutar
-
-```bash
+```powershell
+cd "$HOME\Documents\dashboard-transporte"
 npm install
 npm run dev
 ```
 
-Luego abrir `http://localhost:5173`.
+Abrir `http://localhost:5173`.
 
-## Interacciones incluidas
+## Funcionalidad demo
 
-- Navegación lateral por módulos.
+- Logo Solbus integrado en `public/solbus-logo.svg`.
+- Módulos navegables: Resumen, Tráfico, Flota, Taller, RRHH, Combustible y Seguridad.
+- Filtro por base y búsqueda global.
 - Selector de período.
-- Búsqueda de bases.
-- Cards KPI animadas con hover.
-- Gráfico de rendimiento operativo.
-- Donut interactivo de disponibilidad de flota.
-- Cards de bases con hover y estado.
-- Drawer lateral animado al seleccionar una base.
-- Drill-down de actividad reciente y botón de acceso al tablero de base.
-- Layout responsive para desktop, tablet y móvil.
+- KPI clickeables que llevan al módulo relacionado.
+- Bases operativas clickeables con drawer de detalle.
+- KPI del drawer navegables hacia módulos.
+- Registros operativos clickeables con detalle.
+- Alertas, notificaciones, exportación simulada y mensajes de feedback.
+- Responsive para escritorio, tablet y móvil.
 
-## Próxima etapa
-
-Reemplazar los datos demo de `src/main.tsx` por una API autenticada y conectar los módulos de tráfico, flota, taller, RRHH, combustible y seguridad con PostgreSQL.
+Los datos se encuentran en `src/main.tsx` como dataset de demostración. En la siguiente etapa se pueden reemplazar por endpoints de una API y autenticación por roles.
